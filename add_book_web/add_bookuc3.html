@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address book form</title>
+    <link rel="stylesheet" href="../add_book_web/add_css.css">
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/booklogo.jpg" alt="" width="8%">
+            <div>
+                <span class="emp-text">Address</span><br>
+                <span class="emp-text address-book">Book</span>
+            </div>
+        </div>
+    </header>
+    <div class="form-container">
+        
+            <div class="form-content">
+                <div class="form-head"> 
+                    <h5 class="heading">PERSON ADDRESS FORM</h5>
+                    <img src="../assets/cancel.jpg" class="cancel_img" alt="cancel" width="4%" height="4%">
+                </div>
+                <div class="form-body">
+                    <div class="full-width">
+                        <label for="fullname" class="fullname-label">Fullname</label>
+                        <input type="text" name="fullname" class="input-field" id="fullname">
+                    </div>
+                    <div class="top-margin">
+                        <textarea id="address" name="address" rows="4" cols="85" placeholder="Address"></textarea>
+                    </div>
+                    <div class="full-width top-margin">
+                        <select name="city" id="city" class="dropdown">
+                            <option>select city</option>
+                        </select>
+                        <select name="state" id="state" class="dropdown">
+                            <option>select state</option>
+                        </select>
+                        <input type="text" name="zipcode" id="zipcode" class="zipcode-field" placeholder="Zip code">
+                    </div>
+                    <div class="full-width top-margin">
+                        <input type="text" name="phonenumber" id="phonenumber" class="input-field" placeholder="Phone number">
+                    </div>
+                </div>
+                <div class="form-foot">
+                    <button class="custom-buttons right-margin">Add</button>
+                    <button class="custom-buttons">Reset</button>
+                </div>
+            </div>    
+        
+    </div>
+</body>
+</html>
