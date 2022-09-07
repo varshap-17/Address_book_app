@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Registration page</title>
+
+    </head>
+    <body>
+        <h1>Registration form</h1>
+        <div>
+            <label for="name">Name</label>
+            <input  class="input" type="text" name="name" id="name"><br>
+            <error-output class="text-error" for="text"></error-output>
+            <label for="password">Password</label>
+            <input class="input" type="text" name="password" id="password" required><br>
+            <error-output class="text-error1" for="text"></error-output>
+            <div class="button">
+                <a href="../workshop/dash.html" class="button"><button>submit</button></a>
+            </div>
+        </div>
+        <script>
+            const text=document.querySelector('#name');
+            const textError=document.querySelector('.text-error');
+            text.addEventListener('input',function(){
+                let nameregex=RegExp('^[A-Za-z]*(.)[A-Za-z]*$');
+                if(nameregex.test(text.value))
+                    textError.textContent="";
+                else
+                    textError.textContent="name is incorrect****";
+            });
+            const text1=document.querySelector('#password');
+            const textError1=document.querySelector('.text-error1');
+            text1.addEventListener('input',function(){
+                let password=RegExp('^[a-z]{7}[0-9]{1}$');
+                if(password.test(text1.value))
+                    textError1.textContent="";
+                else
+                    textError1.textContent="please enter correct password";
+            });
+        </script>
+    </body>
+</html>
